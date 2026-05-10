@@ -25,7 +25,7 @@ async def main():
     client = MultiServerMCPClient(
         {
             "amap": {
-                "url": f"https://mcp.amap.com/sse?key={os.getenv('GAODE_API')}",
+                "url": f"https://mcp.amap.com/sse?key={os.getenv('GAODE_API_KEY')}",
                 "transport": "sse",
             }
         }
