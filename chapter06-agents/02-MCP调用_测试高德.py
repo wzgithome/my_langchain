@@ -9,7 +9,7 @@ import dotenv
 
 async def main():
     # 1. 加载环境变量
-    dotenv.load_dotenv(dotenv_path='../chapter02-model IO/.env')
+    dotenv.load_dotenv(dotenv_path='../.env')
     os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY2")
     os.environ["OPENAI_BASE_URL"] = os.getenv("OPENAI_BASE_URL2")
 

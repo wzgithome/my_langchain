@@ -5,7 +5,7 @@ import dotenv
 from fastmcp.prompts import PromptMessage
 from mcp.types import TextContent
 
-dotenv.load_dotenv(dotenv_path='../chapter02-model IO/.env')
+dotenv.load_dotenv(dotenv_path='../.env')
 os.environ["TAVILY_API_KEY"] = os.getenv("TAVILY_API_KEY")
 
 
