@@ -13,10 +13,10 @@ os.environ["OPENAI_BASE_URL"] = os.getenv("OPENAI_BASE_URL2")
 
 # ================== 2. 初始化模型和工具 ==================
 model = init_chat_model(
-    model='qwen3.6-flash-2026-04-16',
+    model='kimi-k2.7-code',
     temperature=0.6,
     model_provider='openai',
-    profile={"max_input_tokens": 128_000}
+    # profile={"max_input_tokens": 128_000}
     # 开启深度思考
     # extra_body={"enable_thinking": True},
     # 启用联网搜索功能
@@ -24,7 +24,7 @@ model = init_chat_model(
 )
 
 model_tool = ChatOpenAI(
-    model="qwen3.6-flash-2026-04-16",
+    model="qwen3.7-plus-2026-05-26",
     temperature=0.6,
     # extra_body={"enable_thinking": False},
 
