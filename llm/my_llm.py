@@ -3,12 +3,13 @@ import dotenv
 from langchain.chat_models import init_chat_model
 from langchain_community.chat_models.tongyi import ChatTongyi
 from langchain_openai import ChatOpenAI
+from langchain_community.embeddings import DashScopeEmbeddings
 
 # 定义的模型类
 dotenv.load_dotenv(dotenv_path='../.env')
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY2")
 os.environ["OPENAI_BASE_URL"] = os.getenv("OPENAI_BASE_URL2")
-
+os.environ["DASHSCOPE_API_KEY"] = os.getenv("OPENAI_API_KEY2")
 
 
 # ================== 2. 初始化模型和工具 ==================
@@ -28,7 +29,9 @@ model_tool = ChatOpenAI(
     temperature=0.6,
     # extra_body={"enable_thinking": False},
 
-    # max_tokens=128_000
+)
+embedding_model=DashScopeEmbeddings(
+    model='qwen3.7-text-embedding',
 )
 
 
